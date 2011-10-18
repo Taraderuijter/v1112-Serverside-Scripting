@@ -1,0 +1,20 @@
+/**
+* Serverside Scripting Standard Stylesheet v0.1
+*
+* J.P. Sturkenboom <j.p.sturkenboom@hva.nl>
+* Copyleft 2011, All wrongs reversed
+*/
+
+body {
+	background: url(/pics/bg.png) top left repeat;
+}
+
+h1 {
+	width: 200px;
+	height: 27px;
+	background: url(/pics/sss.png) top left no-repeat;
+}
+
+h1 span {
+	display: none;
+}
