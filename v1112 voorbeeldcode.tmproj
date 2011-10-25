@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>../../v1112 Serverside Scripting/Voorbeeldcode/style/style_normal.css</string>
+	<string>../../v1112 Serverside Scripting/Voorbeeldcode/index.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -29,8 +29,6 @@
 			<string>../../v1112 Serverside Scripting/Voorbeeldcode/pics</string>
 		</dict>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>style</string>
 			<key>regexFolderFilter</key>
@@ -42,7 +40,9 @@
 			<key>filename</key>
 			<string>../../v1112 Serverside Scripting/Voorbeeldcode/index.php</string>
 			<key>lastUsed</key>
-			<date>2011-10-18T19:40:22Z</date>
+			<date>2011-10-25T09:42:30Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -54,7 +54,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>31</integer>
+				<integer>19</integer>
 				<key>line</key>
 				<integer>12</integer>
 			</dict>
@@ -68,9 +68,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>14</integer>
+				<integer>9</integer>
 				<key>line</key>
-				<integer>18</integer>
+				<integer>17</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -101,6 +101,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{233, 4}, {1040, 774}}</string>
+	<string>{{230, 2}, {1040, 774}}</string>
 </dict>
 </plist>

@@ -9,12 +9,12 @@ body {
 	background: url(/pics/bg.png) top left repeat;
 }
 
-h1 {
-	width: 200px;
-	height: 27px;
+div#wrapper {
+	margin-left: auto;
+	margin-right: auto;
 	background: url(/pics/sss.png) top left no-repeat;
-}
-
-h1 span {
-	display: none;
+	padding: 6px;
+	padding-top: 40px;
+	width: 50em;
+	min-height: 100%;
 }

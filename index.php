@@ -9,8 +9,14 @@
 	<link href="/style/style_normal.css" rel="Stylesheet" type="text/css" media="all" />
 </head>
 <body>
+	
+	<div id="wrapper">
+<?php
 
-	<h1><span>Serverside Scripting</span></h1>
+	echo "Hi from PHP!";
+
+?>				
+	</div>
 
 </body>
 </html>
