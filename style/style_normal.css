@@ -1,5 +1,5 @@
 /**
-* Serverside Scripting Standard Stylesheet v0.1
+* Serverside Scripting Standard Stylesheet v0.2
 *
 * J.P. Sturkenboom <j.p.sturkenboom@hva.nl>
 * Copyleft 2011, All wrongs reversed
@@ -17,4 +17,54 @@ div#wrapper {
 	padding-top: 40px;
 	width: 50em;
 	min-height: 100%;
+}
+
+div#menu {
+	height: 2em;
+}
+
+div#menu ul {
+	list-style: none;
+}
+
+div#menu ul li {
+	display: inline;
+	float: left;
+}
+
+div#menu ul li a {
+	display: block;
+	padding-right: 1em;
+	height: 2em;
+	line-height: 2em;
+}
+
+ul {
+	margin: 0px; padding: 0px;
+	list-style: none;
+}
+
+span.filename {
+	display: block;
+	float: left;
+	width: 15em;
+}
+
+label {
+	display: block;
+	float: left;
+	width: 7.5em;
+	height: 2em;
+	clear: both;
+}
+
+input, textarea {
+	float: left;
+	width: 16em;
+	font-size: 1em;
+}
+
+textarea {
+	width: 17.5em;
+	height: 8em;
 }
