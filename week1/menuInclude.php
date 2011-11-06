@@ -10,7 +10,7 @@
 	
 	<div id="wrapper">
 
-		<?php include('menu.php'); ?>
+<?php include('menu.php'); ?>
 
 		<div id="content">
 			<h1>Fusce dapibus</h1>

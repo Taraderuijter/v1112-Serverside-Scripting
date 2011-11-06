@@ -11,11 +11,13 @@
 <body>
 	
 	<div id="wrapper">
+		
 <?php
 
 	echo "<p>Hello World!</p>";
 
-?>				
+?>		
+		
 	</div>
 
 </body>
