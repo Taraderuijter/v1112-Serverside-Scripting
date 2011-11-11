@@ -1,5 +1,6 @@
 <?php
 
+# Geef de HTML openen code weer
 echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -13,10 +14,12 @@ echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.or
 	<div id="wrapper">
 ';
 
+# Haal de inhoud van het bestand menu.php op
 include('menu.php');
 
+# Maak een array bestaande uit arrays
 $berichtenRij = array(
-	
+	# Maak een array bestaande uit een titel, datum en bericht en de bijbehorende informatie
 	array('titel'	=> 'Cheap wireless for microcontrollers',
 		  'datum'	=> '29/08/2009',
 		  'bericht'	=> 'Everybody loves microcontrollers, including the Arduino, allowing you to create whatever you imagine. That is unless you want to hack together something wireless. Originally you had to rely on the expensive XBee protocol or other wireless options, but no longer. Hobby Robotics found an extremely cheap transmitter and receiver and wrote a quick guide for wiring them up to an Arduino. Now your wireless projects can come to life, as long as you are within 500 feet and don’t mind 2400bps; minor trade offs compared to the gains of wireless freedom. Final note: You aren’t limited to Arduino, we would love to see someone modify this to work with a PIC or other microcontroller.'),
@@ -38,10 +41,32 @@ $berichtenRij = array(
 		  'bericht'	=> 'Peter Kirn over at Create Digital Music takes an in depth look at the process of adding your own music to Rock Band 2. This involves using REAPER audio production software, uploading your work via the XNA Creators’ Club, and then playing the fresh track on an Xbox 360. Both REAPER and the XNA Club cost money, and the total price comes out somewhere between $100-$160. The process is now in closed beta but a wider beta is expected in September followed by a full release in October.')
 );
 
+# Public: Vergelijk twee titels met elkaar en geef aan welke alfabetisch gezien als eerste komt
+#
+# $a	- De eerste titel om te vergelijken
+# $b	- De tweede titel om te vergelijken
+#
+# Examples:
+#
+#	vergelijk_titel('Wicked Cool PHP', 'Spring into PHP 5');
+#	# => 1
+#
+# Returns: -1 als $a kleiner is als $b; 1 als $a groter is dan $b, en 0 als $a en $b gelijk zijn. 
 function vergelijk_titel($a, $b){
 	return strcasecmp($a['titel'], $b['titel']);
 }
 
+# Public: Vergelijk twee data met elkaar en geef aan welke alfabetisch gezien als eerste komt
+#
+# $a	- De eerste datum om te vergelijken
+# $b	- De tweede datum om te vergelijken
+#
+# Examples:
+#
+#	vergelijk_datum('31/08/2009', '15/08/2009');
+#	# => 1
+#
+# Returns: -1 als $a kleiner is als $b; 1 als $a groter is dan $b, en 0 als $a en $b gelijk zijn.
 function vergelijk_datum($a, $b){
 	$a_time = strtotime($a['datum']);
 	$b_time = strtotime($b['datum']);
@@ -52,26 +77,44 @@ function vergelijk_datum($a, $b){
 	return ($a_time > $b_time)? -1 : 1;
 }
 
+# Public: Vergelijk twee berichten met elkaar en geef aan welke alfabetisch gezien als eerste komt
+#
+# $a	- Het eerste berichten om te vergelijken
+# $b	- Het tweede berichten om te vergelijken
+#
+# Examples:
+#
+#	vergelijk_bericht('Lorem ipsum...', 'Dolor sit amet...');
+#	# => 1
+#
+# Returns: -1 als $a kleiner is als $b; 1 als $a groter is dan $b, en 0 als $a en $b gelijk zijn.
 function vergelijk_bericht($a, $b){
 	return strcasecmp($a['bericht'], $b['bericht']);
 }
 
+# Schakel op de waarde van de met GET verstuurde variabele sorterenOp
 switch(@$_GET['sorterenOp']){
 	
+	# de inhoud van sorterenOp is titel
 	case "titel":
+		# sorteer op titel
 		usort($berichtenRij, "vergelijk_titel");
 		break;
-		
+	
+	# de inhoud van sorterenOp is datum
 	case "datum":
+		# sorteer op datum
 		usort($berichtenRij, "vergelijk_datum");
 		break;
-		
+	
+	# de inhoud van sorterenOp is bericht
 	case "bericht":
+		# sorteer op bericht
 		usort($berichtenRij, "vergelijk_bericht");
 		break;
 }
 
-
+# Loop de array af en toon een HTML representatie van elk bericht
 foreach($berichtenRij as $bericht) {
 	echo '
 		<div class="bericht">
@@ -82,6 +125,7 @@ foreach($berichtenRij as $bericht) {
 	';
 }
 
+# Geef de HTML code voor het sluiten van de pagina weer
 echo '
 	</div>
 

@@ -10,7 +10,12 @@
 	
 	<div id="wrapper">
 
-<?php include('menu.php'); ?>
+<?php 
+
+# Haal de inhoud van het bestand menu.php op
+include('menu.php'); 
+
+?>
 
 		<div id="content">
 			<h1>Fusce dapibus</h1>

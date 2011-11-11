@@ -1,5 +1,6 @@
 <?php
 
+# Geef de HTML openen code weer
 echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -12,9 +13,9 @@ echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.or
 	
 	<div id="wrapper">
 ';
-
+# Maak een array bestaande uit arrays
 $berichtenRij = array(
-	
+	# Maak een array bestaande uit een titel, datum en bericht en de bijbehorende informatie
 	array('titel'	=> 'Cheap wireless for microcontrollers',
 		  'datum'	=> '29 aug 2009',
 		  'bericht'	=> 'Everybody loves microcontrollers, including the Arduino, allowing you to create whatever you imagine. That is unless you want to hack together something wireless. Originally you had to rely on the expensive XBee protocol or other wireless options, but no longer. Hobby Robotics found an extremely cheap transmitter and receiver and wrote a quick guide for wiring them up to an Arduino. Now your wireless projects can come to life, as long as you are within 500 feet and don’t mind 2400bps; minor trade offs compared to the gains of wireless freedom. Final note: You aren’t limited to Arduino, we would love to see someone modify this to work with a PIC or other microcontroller.'),
@@ -36,6 +37,7 @@ $berichtenRij = array(
 		  'bericht'	=> '[Peter Kirn] over at Create Digital Music takes an in depth look at the process of adding your own music to Rock Band 2. This involves using REAPER audio production software, uploading your work via the XNA Creators’ Club, and then playing the fresh track on an Xbox 360. Both REAPER and the XNA Club cost money, and the total price comes out somewhere between $100-$160. The process is now in closed beta but a wider beta is expected in September followed by a full release in October.')
 );
 
+# Loop de array af en toon een HTML representatie van elk bericht
 foreach($berichtenRij as $bericht) {
 	echo '
 		<div class="bericht">
@@ -46,6 +48,7 @@ foreach($berichtenRij as $bericht) {
 	';
 }
 
+# Geef de HTML code voor het sluiten van de pagina weer
 echo '
 	</div>
 

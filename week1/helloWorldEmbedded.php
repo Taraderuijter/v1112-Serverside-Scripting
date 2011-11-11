@@ -13,7 +13,7 @@
 	<div id="wrapper">
 		
 <?php
-
+	# Geef een hallo wereld boodschap door
 	echo "<p>Hello World!</p>";
 
 ?>		
