@@ -7,9 +7,8 @@ require('inc/template.inc.php');
 htmlOpenen('Mail-form-hijacking');
 
 # Als het formulier verstuurd is bestaat de variabele submit in de POST array
-
-
-if(isset($_POST['submit']) && !preg_match( "/[\r\n]/", $_POST['email'] ) ){
+# Beveiliging: if(isset($_POST['submit']) && !preg_match( "/[\r\n]/", $_POST['email'] ) ){
+if(isset($_POST['submit']), $_POST['email'] ) ){
 	
 	# Laad de via het formulier verstuurde waarden over in bruikbare variabelen
 	$subject = $_POST['naam'].' stuurde een mail via PHP!';

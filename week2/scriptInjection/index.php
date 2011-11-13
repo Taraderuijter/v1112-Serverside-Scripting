@@ -22,6 +22,7 @@ if(isset($_POST['submit'])){
 	
 	# Koppel de variabele $tekst aan het SQL toevoegen statement
 	$statement->bind_param('s', $tekst);
+	# Beveiliging: $tekst = transform_HTML($_POST['tekst']);
 	$tekst = $_POST['tekst'];
 	
 	# Voer het SQL statement uit en sluit het

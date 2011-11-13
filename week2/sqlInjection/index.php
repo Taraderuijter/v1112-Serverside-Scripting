@@ -30,10 +30,13 @@ $link = dbConnect();
 # Als het formulier verstuurd is
 if(isset($_POST['submit'])){
 	# Zoek in de database
+	# Beveiliging: $username = mysql_real_escape_string($_POST['username']);
+	# Beveiliging: $password = mysql_real_escape_string($_POST['password']);
+	# Beveiliging: $query = "SELECT * FROM gebruikers WHERE username='".$username."' AND password=MD5('".$password."');";
 	$query = "SELECT * FROM gebruikers WHERE username='".$_POST['username']."' AND password=MD5('".$_POST['password']."');";
-	echo '<div class="webtekst" style="clear: both">'.$query.'</div><br />';
-	
 	$result = $link->query($query);
+	echo '<div class="webtekst" style="clear: both; color: blue;">'.$query.'</div><br />';
+	
 	if ($result->num_rows > 0) {
 		echo '
 			<div class="webtekst" style="clear: both; color: red;">

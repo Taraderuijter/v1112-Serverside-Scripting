@@ -60,6 +60,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{48, 72}, {1065, 703}}</string>
+	<string>{{10, 72}, {1065, 703}}</string>
 </dict>
 </plist>

@@ -18,8 +18,12 @@ echo '
 	</div>
 ';
 
+# maak een lijst met toegestane pagina's
+$toegestanePagina = array('eentekst.php');
+
 # als de GET variabele page bestaat
-if(isset($_GET['page'])){
+# Beveiliging: if(isset($_GET['page']) && in_array($_GET['page'], $toegestanePagina)){
+if(isset($_GET['page'])){	
 	# laad de variabele over in een bruikbare variabele
 	$page = $_GET['page'];
 	# lees de inhoud van de opgevraagde pagina
