@@ -1,0 +1,6 @@
+The files in this folder are for study purposes only, none of these files
+should be used in a production environment. The point of putting these files
+online in the first place is teaching students about security issues in using
+PHP and MySQL in combination with user data. All these files pose a severe
+security risk when used in a production environment, some scripts have been
+compromised on purpose to demonstrate risks. Use at your own risk...
