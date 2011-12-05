@@ -1,13 +1,8 @@
 <?php
-
 # include de benodigde bestanden (require geeft een fatale fout als het niet lukt)
 require('inc/config.inc.php');
 require('inc/functions.inc.php');
 require('inc/template.inc.php');
-
-# DON'T EVER USE THIS IN PRODUCTION, UNDERMINES SAFE MODE!!
-foreach($_POST as $key=>$value){ $_POST[$key] = stripslashes($value); }
-# /DON'T EVER USE THIS IN PRODUCTION, UNDERMINES SAFE MODE!!
 
 # geef de HTML code voor het openen van de pagina weer
 htmlOpenen('Script Injection');
@@ -17,13 +12,13 @@ $link = dbConnect();
 
 # Als het formulier verstuurd is
 if(isset($_POST['submit'])){
+	
 	# Maak een SQL statement klaar voor toevoegen
 	$statement = $link->prepare('INSERT INTO webtekst (tekst) VALUES (?)');
 	
 	# Koppel de variabele $tekst aan het SQL toevoegen statement
 	$statement->bind_param('s', $tekst);
-	# Beveiliging: $tekst = transform_HTML($_POST['tekst']);
-	$tekst = $_POST['tekst'];
+	$tekst = transform_HTML($_POST['tekst']);
 	
 	# Voer het SQL statement uit en sluit het
 	$statement->execute();
@@ -32,10 +27,11 @@ if(isset($_POST['submit'])){
 
 # Selecteer alle teksten en geef ze weer
 $result = $link->query('SELECT * FROM webtekst');
-while($record = $result->fetch_object()){
+
+while($record = $result->fetch_array()){
 	echo '
 		<div class="webtekst">
-			'.$record->tekst.'
+			'.$record['tekst'].'
 		</div><hr />
 	';	
 }
