@@ -39,6 +39,11 @@ div#menu ul li a {
 	line-height: 2em;
 }
 
+div#uploadForm {
+	width: 50em;
+	height: 5em;
+}
+
 ul {
 	margin: 0px; padding: 0px;
 	list-style: none;

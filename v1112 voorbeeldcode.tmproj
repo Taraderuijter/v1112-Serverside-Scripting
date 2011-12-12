@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>week5/collaborative story/groep 1/index.php</string>
+	<string>week6/index.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -23,8 +23,6 @@
 			<string>week2</string>
 		</dict>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>week3</string>
 			<key>regexFolderFilter</key>
@@ -33,14 +31,22 @@
 			<string>week3</string>
 		</dict>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>week5</string>
 			<key>regexFolderFilter</key>
 			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
 			<key>sourceDirectory</key>
 			<string>week5</string>
+		</dict>
+		<dict>
+			<key>expanded</key>
+			<true/>
+			<key>name</key>
+			<string>week6</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>week6</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -51,6 +57,8 @@
 			<string>pics</string>
 		</dict>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>style</string>
 			<key>regexFolderFilter</key>
@@ -75,28 +83,28 @@
 	<integer>166</integer>
 	<key>metaData</key>
 	<dict>
-		<key>week5/collaborative story/groep 1/index.php</key>
+		<key>week6/index.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>74</integer>
 				<key>line</key>
 				<integer>11</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>8</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>week5/collaborative story/groep 1/index.php</string>
+		<string>week6/index.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
-	<true/>
+	<false/>
 	<key>windowFrame</key>
-	<string>{{176, 4}, {1104, 774}}</string>
+	<string>{{0, 4}, {1024, 742}}</string>
 </dict>
 </plist>
