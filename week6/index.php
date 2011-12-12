@@ -13,7 +13,7 @@ echo '
 		<label for="plaatje">Plaatje:</label>
 			<input type="file" name="plaatje" id="plaatje" /><br />
 		<label for="submit"></label>
-			<input type="submit" name="submit" id="submit" value="Verstuur email!" /><br />
+			<input type="submit" name="submit" id="submit" value="Verstuur bestand!" /><br />
 	</form>
 	</div>
 ';
@@ -25,7 +25,7 @@ if(isset($_POST['submit']) && isset($_FILES['plaatje']) && $_FILES['plaatje']['t
 
 }elseif(isset($_FILES['plaatje']) && $_FILES['plaatje']['type']!="image/jpeg"){
 	
-	echo '<span id="warning">Het bestand is van een onjuist type, er mogen enkel jpeg bestanden ge&uuml;ploaded worden.</span>';
+	echo '<span id="warning">U probeert een niet toegestaan bestandstype te uploaden. U mag enkel jpg bestanden versturen.</span>';
 	
 }
 
