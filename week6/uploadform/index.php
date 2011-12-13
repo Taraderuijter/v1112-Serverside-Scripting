@@ -1,8 +1,8 @@
 <?php
 # include de benodigde bestanden (require geeft een fatale fout als het niet lukt)
-require('./inc/config.inc.php');
-require('./inc/functions.inc.php');
-require('./inc/template.inc.php');
+require('../inc/config.inc.php');
+require('../inc/functions.inc.php');
+require('../inc/template.inc.php');
 
 # geef de HTML code voor het openen van de pagina weer
 htmlOpenen('Upload formulier');

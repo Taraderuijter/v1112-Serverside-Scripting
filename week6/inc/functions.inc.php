@@ -175,12 +175,4 @@ function maak_hyperlinks($plainText){
 	return $output;
 }
 
-# $rxp_date		= /^(19|20)\d\d[- \/.](0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])$/;
-# $rxp_alpha	= /^([ \u00c0-\u01ffa-zA-Z.'\-])+$/;
-# $rxp_alphanum	= /^([ \u00c0-\u01ff0-9a-zA-Z.'\-])+$/;
-# $rxp_postal	= /^[ a-zA-Z0-9]+$/;
-# $rxp_phone	= /^((\+|00)[1-9](-\d+|\d*))?(\(\d+\))?\d+(-\d+)*$/;
-# $rxp_email	= /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-
-
 ?>
