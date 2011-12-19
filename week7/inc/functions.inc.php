@@ -204,10 +204,10 @@ function saveClickPath(){
 #
 # Examples:
 #
-#	authenticatie();
+#	authenticeer();
 #	# => Het login systeem is in werking.
 #
-function authenticatie(){
+function authenticeer(){
 	global $users; # dit is erg smerig, getver, maar er zijn geen arrays in define() land
 	
 	# Controleer of er uitgelogd moet worden
@@ -230,10 +230,14 @@ function authenticatie(){
 	if(!isset($_SESSION['geauthenticeerd']) || $_SESSION['geauthenticeerd'] == false){
 		# Niet ingelogd, controleer of het formulier verstuurd is
 		if(isset($_POST['login'])){
+			
 			# Het form is verstuurd, controleer de gegevens
 			if(array_key_exists($_POST['username'], $users)){
 				# De gebruiker is bekend, controleer het wachtwoord
-				if($users[ $_POST['username'] ]==$_POST['password']){
+				$key = $_POST['username'];
+				$value = $_POST['password'];
+					
+				if($users[ $key ]==$value){
 					# Het wachtwoord is juist, de gebruiker is ingelogd
 						$_SESSION['geauthenticeerd'] = true;
 						$_SESSION['gebruiker'] = $_POST['username'];

@@ -4,6 +4,9 @@ require('../inc/config.inc.php');
 require('../inc/template.inc.php');
 require('../inc/functions.inc.php');
 
+//authenticeer();
+//saveClickPath();
+
 # geef de HTML code voor het openen van de pagina weer
 htmlOpenen('CMS Basics');
 

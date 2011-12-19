@@ -5,7 +5,7 @@ require('../inc/template.inc.php');
 require('../inc/functions.inc.php');
 
 # dwing een login af
-authenticatie();
+authenticeer();
 
 # geef de HTML code voor het openen van de pagina weer
 htmlOpenen('Informatie afschermen met een login');
