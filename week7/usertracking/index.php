@@ -11,7 +11,6 @@ htmlOpenen('User Tracking met Sessies');
 saveClickPath();
 
 
-
 # Toon de inhoud van de sessie array
 echo '<pre>';
 print_r($_SESSION);
